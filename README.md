@@ -15,7 +15,7 @@
 - has_many :items
 - has_many :documents
 
-## items
+## items  
 
 | Column                 | Type       | Options                        |
 | ---------------------- | ---------- | ------------------------------ |
