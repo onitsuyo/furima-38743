@@ -1,7 +1,7 @@
 class DocumentAddress
   
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :municipalities, :house_number, :building, :phone_number, :document_id
+  attr_accessor :user_id, :item_id, :post_code, :prefecture_id, :municipalities, :house_number, :building, :phone_number, :document_id, :token
   
   with_options presence: true do
     validates :user_id
@@ -11,6 +11,7 @@ class DocumentAddress
     validates :municipalities
     validates :house_number
     validates :phone_number, numericality: {only_integer: true, length: { minimum: 10, maximum: 11 }}
+    validates :token
   end
 
   def save
