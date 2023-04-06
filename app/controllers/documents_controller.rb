@@ -4,7 +4,7 @@ class DocumentsController < ApplicationController
 
   def index
     @document_address = DocumentAddress.new
-    if current_user.id == @item.user_id
+    if current_user.id == @item.user_id || @item.document.present?
       redirect_to root_path
     end
   end
