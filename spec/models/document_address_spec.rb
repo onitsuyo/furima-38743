@@ -26,8 +26,8 @@ RSpec.describe DocumentAddress, type: :model do
         @document_address.valid?
         expect(@document_address.errors.full_messages).to include("Post code can't be blank")
       end
-      it 'prefecture_idが空では保存できない' do
-        @document_address.prefecture_id = ''
+      it 'prefecture_idが1では保存できない' do
+        @document_address.prefecture_id = 1
         @document_address.valid?
         expect(@document_address.errors.full_messages).to include("Prefecture can't be blank")
       end
